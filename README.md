@@ -36,3 +36,10 @@ GBK is a double-byte encoding for Chinese text but a single-byte encoding for AS
 - `encode(text, errors='strict') -> bytes` — convenience function
 
 Python 3.10+. No dependencies.
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
