@@ -1,6 +1,6 @@
 [project]
 name = "gbk-character-decoder"
-version = "0.1.0"
+version = "0.1.1"
 description = "Decodes and encodes Chinese text using the GBK character encoding standard, a superset of GB2312."
 requires-python = ">=3.10"
 dependencies = []
